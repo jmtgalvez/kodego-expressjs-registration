@@ -1,0 +1,22 @@
+{
+  "name": "express-registration",
+  "version": "1.0.0",
+  "description": "'Basic express app for registration'",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "'Miguel'",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "hbs": "^4.2.0",
+    "jshint": "^2.13.4",
+    "nodemon": "^2.0.18"
+  }
+}
