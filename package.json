@@ -16,7 +16,6 @@
   },
   "devDependencies": {
     "hbs": "^4.2.0",
-    "jshint": "^2.13.4",
     "nodemon": "^2.0.18"
   }
 }
