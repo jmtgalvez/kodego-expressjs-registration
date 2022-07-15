@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register</title>
+  <title>Update Profile</title>
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
@@ -16,34 +16,26 @@
       </div>
 
       <div class="card-body">
-        <form action="/auth/register" method="post">
+        <form action="/auth/update/{{user.id}}" method="post">
           <fieldset>
+            {{!-- <input type="number" name="id" value={{user.id}} style="display: none" /> --}}
+          
             <div class="mb-3">
               <label for="first_name" class="form-label">First Name</label>
-              <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Enter first name" required />
+              <input type="text" name="first_name" id="first_name" class="form-control" value={{user.first_name}} required />
             </div>
             
             <div class="mb-3">
               <label for="last_name" class="form-label">Last Name</label>
-              <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Enter last name" required />
+              <input type="text" name="last_name" id="last_name" class="form-control" value={{user.last_name}} required />
             </div>
             
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input type="email" name="email" id="email" class="form-control" placeholder="Enter email" required />
+              <input type="email" name="email" id="email" class="form-control" value={{user.email}} required disabled />
             </div>
             
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" name="password" id="password" class="form-control" placeholder="Enter password" required />
-            </div>
-            
-            <div class="mb-3">
-              <label for="cPassword" class="form-label">Confirm Password</label>
-              <input type="password" name="cPassword" id="cPassword" class="form-control" placeholder="Confirm password" required />
-            </div>
-            
-            <input type="submit" value="Register" class="btn btn-primary" />
+            <button type="submit" class="btn btn-primary">Update</button>
           </fieldset>
         </form>
       </div>
